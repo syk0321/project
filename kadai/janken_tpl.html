@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>Computation Practice</title>
+</head>
+<body>
+
+<header>
+  <h1>Computation Practice</h1>
+  <h2></h2>
+  <h3>Press the button of the genre you want to practice.Every question has time limits.</h3>
+</header>
+
+<main>
+<div class="options">
+  <div >
+    <h1 id="two_multi_btn">2 digit Multiplication</h1>
+  </div>
+  <!-- <div>
+    <h1 id="three_multi_btn">三桁のかけ算</h1>
+  </div> -->
+  <div>
+  <h1 id="two_div_btn">2 digit division</h1>
+  </div>
+  <!-- <div>
+  <h1 id="decimal_div_btn">小数点同士の割り算</h1>
+  </div> -->
+</div>
+
+<div>
+  <p id="sentence"></p>
+</div>
+
+
+<div class="questions">
+
+  <div>
+  <p id="q1"></p>
+  </div>  
+  <div>
+  <p id="markone"> </p>
+  </div>
+  <div>
+  <p id="q2"></p>
+  </div>
+  <div>
+  <p id="marktwo"></p>
+  </div>
+  <div>
+  <p id="answer"></p>
+  </div>
+
+</div>
+
+
+
+
+  <div class="timerzone">
+    <p></p>
+    <p id="timer"></p>
+  </div>
+
+<div>
+  <p id="next_btn"></p>
+</div>
+
+
+
+
+
+<p></p>
+</main>
+
+
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+
+
+
+
+$("#two_multi_btn").on("click", function(){
+  let q1a =Math.floor(Math.random() * 89) + 10;
+  let q1b =Math.floor(Math.random() * 89) + 10;
+  $("#q1").html(  q1a );  
+  $("#q2").html(  q1b );
+  $("#markone").html( "×");
+  $("#marktwo").html( "=");
+  $("#answer").empty();
+  $("#next_btn").html( "NEXT")
+  
+
+  $("#timer").html("00:15 "); 
+  window.setTimeout(function(){$("#timer").html( "00:14")}, 1000);
+  window.setTimeout(function(){$("#timer").html( "00:13")}, 2000);
+  window.setTimeout(function(){$("#timer").html( "00:12")}, 3000);
+  window.setTimeout(function(){$("#timer").html( "00:11")}, 4000);
+  window.setTimeout(function(){$("#timer").html( "00:10")}, 5000);
+  window.setTimeout(function(){$("#timer").html( "00:09")}, 6000);
+  window.setTimeout(function(){$("#timer").html( "00:08")}, 7000);
+  window.setTimeout(function(){$("#timer").html( "00:07")}, 8000);
+  window.setTimeout(function(){$("#timer").html( "00:06")}, 9000);
+  window.setTimeout(function(){$("#timer").html( "00:05")}, 10000);
+  window.setTimeout(function(){$("#timer").html( "00:04")}, 11000);
+  window.setTimeout(function(){$("#timer").html( "00:03")}, 12000);
+  window.setTimeout(function(){$("#timer").html( "00:02")}, 13000);
+  window.setTimeout(function(){$("#timer").html( "00:01")}, 14000);
+
+
+  window.setTimeout(function(){
+    alert('時間切れです');
+    $("#answer").html( q1a*q1b )
+    
+    }, 15000);
+
+    $("#next_btn").click(function(){
+  let q1a =Math.floor(Math.random() * 89) + 10;
+  let q1b =Math.floor(Math.random() * 89) + 10;
+  $("#q1").html(  q1a );  
+  $("#q2").html(  q1b );
+  $("#answer").empty();
+
+  $("#timer").html("00:15"); 
+  window.setTimeout(function(){$("#timer").html( "00:14")}, 1000);
+  window.setTimeout(function(){$("#timer").html( "00:13")}, 2000);
+  window.setTimeout(function(){$("#timer").html( "00:12")}, 3000);
+  window.setTimeout(function(){$("#timer").html( "00:11")}, 4000);
+  window.setTimeout(function(){$("#timer").html( "00:10")}, 5000);
+  window.setTimeout(function(){$("#timer").html( "00:09")}, 6000);
+  window.setTimeout(function(){$("#timer").html( "00:08")}, 7000);
+  window.setTimeout(function(){$("#timer").html( "00:07")}, 8000);
+  window.setTimeout(function(){$("#timer").html( "00:06")}, 9000);
+  window.setTimeout(function(){$("#timer").html( "00:05")}, 10000);
+  window.setTimeout(function(){$("#timer").html( "00:04")}, 11000);
+  window.setTimeout(function(){$("#timer").html( "00:03")}, 12000);
+  window.setTimeout(function(){$("#timer").html( "00:02")}, 13000);
+  window.setTimeout(function(){$("#timer").html( "00:01")}, 14000);
+
+
+  window.setTimeout(function(){
+    alert('時間切れです');
+    $("#answer").html( q1a*q1b )
+    }, 15000);
+  
+})
+})
+
+$("#two_div_btn").on("click", function(){
+  let q1a =Math.floor(Math.random() * 89) + 10;
+  let q1b =Math.floor(Math.random() * 89) + 10;
+  $("#q1").html(  q1a );  
+  $("#q2").html(  q1b );
+  $("#markone").html( "÷");
+  $("#marktwo").html( "=");
+  $("#answer").empty();
+  $("#sentence").html( "割り切れない場合は小数点第三位を四捨五入");
+  $("#next_btn").html( "NEXT")
+
+  $("#timer").html("00:15 "); 
+  window.setTimeout(function(){$("#timer").html( "00:14")}, 1000);
+  window.setTimeout(function(){$("#timer").html( "00:13")}, 2000);
+  window.setTimeout(function(){$("#timer").html( "00:12")}, 3000);
+  window.setTimeout(function(){$("#timer").html( "00:11")}, 4000);
+  window.setTimeout(function(){$("#timer").html( "00:10")}, 5000);
+  window.setTimeout(function(){$("#timer").html( "00:09")}, 6000);
+  window.setTimeout(function(){$("#timer").html( "00:08")}, 7000);
+  window.setTimeout(function(){$("#timer").html( "00:07")}, 8000);
+  window.setTimeout(function(){$("#timer").html( "00:06")}, 9000);
+  window.setTimeout(function(){$("#timer").html( "00:05")}, 10000);
+  window.setTimeout(function(){$("#timer").html( "00:04")}, 11000);
+  window.setTimeout(function(){$("#timer").html( "00:03")}, 12000);
+  window.setTimeout(function(){$("#timer").html( "00:02")}, 13000);
+  window.setTimeout(function(){$("#timer").html( "00:01")}, 14000);
+
+
+  window.setTimeout(function(){
+    alert('時間切れです');
+    divanswer = Math.floor((q1a/ q1b) * 100) / 100
+    $("#answer").html( divanswer)
+    
+    
+    }, 15000);
+
+    $("#next_btn").click(function(){
+  let q1a =Math.floor(Math.random() * 89) + 10;
+  let q1b =Math.floor(Math.random() * 89) + 10;
+  $("#q1").html(  q1a );  
+  $("#q2").html(  q1b );
+  $("#answer").empty();
+
+  $("#timer").html("00:15"); 
+  window.setTimeout(function(){$("#timer").html( "00:14")}, 1000);
+  window.setTimeout(function(){$("#timer").html( "00:13")}, 2000);
+  window.setTimeout(function(){$("#timer").html( "00:12")}, 3000);
+  window.setTimeout(function(){$("#timer").html( "00:11")}, 4000);
+  window.setTimeout(function(){$("#timer").html( "00:10")}, 5000);
+  window.setTimeout(function(){$("#timer").html( "00:09")}, 6000);
+  window.setTimeout(function(){$("#timer").html( "00:08")}, 7000);
+  window.setTimeout(function(){$("#timer").html( "00:07")}, 8000);
+  window.setTimeout(function(){$("#timer").html( "00:06")}, 9000);
+  window.setTimeout(function(){$("#timer").html( "00:05")}, 10000);
+  window.setTimeout(function(){$("#timer").html( "00:04")}, 11000);
+  window.setTimeout(function(){$("#timer").html( "00:03")}, 12000);
+  window.setTimeout(function(){$("#timer").html( "00:02")}, 13000);
+  window.setTimeout(function(){$("#timer").html( "00:01")}, 14000);
+
+
+  window.setTimeout(function(){
+    alert('時間切れです');
+    divanswer = Math.floor((q1a/ q1b) * 100) / 100
+    $("#answer").html( divanswer)
+    }, 15000);
+
+  
+  
+})
+})
+
+
+
+
+    
+    
+    
+    
+    
+
+</script>
+</body>
+</html>
